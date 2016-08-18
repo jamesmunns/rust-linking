@@ -1,0 +1,7 @@
+[package]
+name = "convolution"
+version = "0.1.0"
+authors = ["James Munns <james.munns@gmail.com>"]
+
+[dependencies]
+time = "0.1"
