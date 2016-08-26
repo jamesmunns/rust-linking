@@ -8,12 +8,17 @@ See (here)[https://en.wikipedia.org/wiki/Convolution]
 
 ## Performance
 
+
+
 ### Python
 
 ```bash
-git:(master) ✗ python convolution.py 
-    ...
-9.98791909218 (seconds)
+➜  python git:(master) ✗ python convolution.py
+9.31936502457
+➜  python git:(master) ✗ python3 convolution.py
+10.76568078994751
+➜  python git:(master) ✗ pypy convolution.py
+0.242394924164
 ```
 
 ### Rust
@@ -21,5 +26,13 @@ git:(master) ✗ python convolution.py
 ```bash
 git:(master) ✗ cargo run --release
    ...
-Duration { secs: 0, nanos: 24089000 }
+Duration { secs: 0, nanos: 17353000 }
 ```
+
+## C
+
+```bash
+git:(master) ✗ gcc main.c -O3 -Wall -Werror -pedantic -o convo && ./convo
+Start
+Done.
+Time taken 0 seconds 35 milliseconds

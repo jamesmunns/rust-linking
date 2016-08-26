@@ -25,5 +25,5 @@ if __name__ == '__main__':
 
 
     start = time.time()
-    print(convolution(new_a, new_b))
+    convolution(new_a, new_b)
     print(time.time() - start)

@@ -25,6 +25,6 @@ fn main() {
     }
 
     let begin = time::now();
-    println!("{:?}", convolution(&c, &d));
+    convolution(&c, &d);
     println!("{:?}", time::now()-begin);
 }
