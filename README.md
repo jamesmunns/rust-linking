@@ -4,11 +4,16 @@ Take two arrays, for example two 10,000 item arrays filled with sin and cos func
 
 Reverse the second array, and multiply and add each position.
 
-See (here)[https://en.wikipedia.org/wiki/Convolution]
+See [here](https://en.wikipedia.org/wiki/Convolution)
 
 ## Performance
 
-
+| Language | Average Time |
+| :------- | :----------- |
+| cpython  | 9-10 seconds |
+| pypy     | 220-250ms    |
+| C (-O3)  | 35-37ms      |
+| Rust     | 15-20ms      |
 
 ### Python
 
