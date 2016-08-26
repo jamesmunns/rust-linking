@@ -8,12 +8,13 @@ See [here](https://en.wikipedia.org/wiki/Convolution)
 
 ## Performance
 
-| Language | Average Time |
-| :------- | :----------- |
-| cpython  | 9-10 seconds |
-| pypy     | 220-250ms    |
-| C (-O3)  | 14-17ms      |
-| Rust     | 15-18ms      |
+| Language          | Average Time |
+| :---------------- | :----------- |
+| cpython           | 9-10 seconds |
+| pypy              | 220-250ms    |
+| C (-O3)           | 14-17ms      |
+| C (memset + -O3)  | 8-11ms       |
+| Rust (--release)  | 15-18ms      |
 
 ### Python
 
@@ -37,7 +38,13 @@ Duration { secs: 0, nanos: 17353000 }
 ## C
 
 ```bash
-git:(master) ✗ gcc main.c -O3 -Wall -Werror -pedantic -o convo && ./convo
+➜  c-lang git:(master) ✗ gcc main.c -O3 -Wall -Werror -pedantic -o convo && ./convo
 Start
 Done.
 Time taken 0 seconds 16 milliseconds
+
+➜  c-lang git:(master) ✗ gcc main.c -O3 -Wall -Werror -pedantic -DUSE_HAX -o convo && ./convo
+Start
+Done.
+Time taken 0 seconds 9 milliseconds
+```

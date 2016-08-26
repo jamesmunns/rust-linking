@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
+#include <string.h>
 
 #define ARRAY_SZ(_ax) (sizeof(_ax)/sizeof(_ax[0]))
 
@@ -10,13 +11,18 @@ void convolution(const double* input_a, const int a_len,
                  double* output)
 {
     // Initialize the array
-    for(int i=0; i<a_len; i++)
-    {
-        for(int j=0; j<b_len; j++)
+    #if !defined(USE_HAX)
+        for(int i=0; i<a_len; i++)
         {
-            output[i+j] = 0.0;
+            for(int j=0; j<b_len; j++)
+            {
+                output[i+j] = 0.0;
+            }
         }
-    }
+    #else
+        // Memset is kind of cheating, its probably all SSE'd up and such
+        memset(output, 0x00, (a_len+b_len-1)*sizeof(double));
+    #endif
 
     // Do the math
     for(int i=0; i<a_len; i++)
