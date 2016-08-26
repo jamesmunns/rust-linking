@@ -12,8 +12,8 @@ See [here](https://en.wikipedia.org/wiki/Convolution)
 | :------- | :----------- |
 | cpython  | 9-10 seconds |
 | pypy     | 220-250ms    |
-| C (-O3)  | 35-37ms      |
-| Rust     | 15-20ms      |
+| C (-O3)  | 14-17ms      |
+| Rust     | 15-18ms      |
 
 ### Python
 
@@ -40,4 +40,4 @@ Duration { secs: 0, nanos: 17353000 }
 git:(master) ✗ gcc main.c -O3 -Wall -Werror -pedantic -o convo && ./convo
 Start
 Done.
-Time taken 0 seconds 35 milliseconds
+Time taken 0 seconds 16 milliseconds
