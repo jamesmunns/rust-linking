@@ -18,6 +18,8 @@ See [here](https://en.wikipedia.org/wiki/Convolution)
 | Pascal            | 35-40ms      |
 | Clojure           | 55-70ms      |
 | Java              | 15-20ms      |
+| Node              | 2 seconds    |
+| JS (browser)      | 800-900ms    |
 
 ### Python
 
@@ -83,4 +85,10 @@ $ java -jar target/clj-0.1.0-SNAPSHOT-standalone.jar
 $ javac Convolve.java
 $ java Convolve
 Elapsed Time: 14.927856ms
+```
+
+## Node/JS
+
+```bash
+$ node convolve.js
 ```
