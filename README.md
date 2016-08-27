@@ -16,6 +16,7 @@ See [here](https://en.wikipedia.org/wiki/Convolution)
 | C (memset + -O3)  | 8-11ms       |
 | Rust (--release)  | 15-18ms      |
 | Pascal            | 35-40ms      |
+| Clojure           | 55-70ms      |
 
 ### Python
 
@@ -65,4 +66,12 @@ Linking convolution
 Start
 Done
 Pascal time taken 0 seconds 37 milliseconds
+```
+
+## Clojure
+
+```bash
+$ lein uberjar                                                                                                  
+$ java -jar target/clj-0.1.0-SNAPSHOT-standalone.jar
+"Elapsed time: 43.266179 msecs"
 ```
