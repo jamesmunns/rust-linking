@@ -16,7 +16,7 @@ See [here](https://en.wikipedia.org/wiki/Convolution)
 | C (memset + -O3)  | 8-11ms       |
 | Rust (--release)  | 15-18ms      |
 | Pascal            | 35-40ms      |
-| Clojure           | 43-62ms      |
+| Clojure           | 55-70ms      |
 
 ### Python
 
