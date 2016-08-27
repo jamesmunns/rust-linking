@@ -15,6 +15,7 @@ See [here](https://en.wikipedia.org/wiki/Convolution)
 | C (-O3)           | 14-17ms      |
 | C (memset + -O3)  | 8-11ms       |
 | Rust (--release)  | 15-18ms      |
+| Pascal            | 35-40ms      |
 
 ### Python
 
@@ -47,4 +48,21 @@ Time taken 0 seconds 16 milliseconds
 Start
 Done.
 Time taken 0 seconds 9 milliseconds
+```
+
+## Pascal
+
+```bash
+➜  pascal git:(master) ✗ fpc -O3 ./convolution.pas && ./convolution
+Free Pascal Compiler version 3.0.0 [2015/11/14] for i386
+Copyright (c) 1993-2015 by Florian Klaempfl and others
+Target OS: Darwin for i386
+Compiling ./convolution.pas
+Assembling (pipe) convolution.s
+Linking convolution
+54 lines compiled, 1.0 sec
+
+Start
+Done
+Pascal time taken 0 seconds 37 milliseconds
 ```
