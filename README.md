@@ -17,6 +17,7 @@ See [here](https://en.wikipedia.org/wiki/Convolution)
 | Rust (--release)  | 15-18ms      |
 | Pascal            | 35-40ms      |
 | Clojure           | 55-70ms      |
+| Java              | 15-20ms      |
 
 ### Python
 
@@ -74,4 +75,12 @@ Pascal time taken 0 seconds 37 milliseconds
 $ lein uberjar                                                                                                  
 $ java -jar target/clj-0.1.0-SNAPSHOT-standalone.jar
 "Elapsed time: 43.266179 msecs"
+```
+
+## Java
+
+```bash
+$ javac Convolve.java
+$ java Convolve
+Elapsed Time: 14.927856ms
 ```
