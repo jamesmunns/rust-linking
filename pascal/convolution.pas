@@ -10,6 +10,8 @@ procedure convolution(const input_a: PDouble; const a_len: LongInt;
                       output_: PDouble);
 var
   i,j: LongInt;
+  x: Double;
+  y: PDouble;
 begin
 {$IFDEF ZERO_LOOP}
     for i:=0 to a_len + b_len-1 do
@@ -19,8 +21,14 @@ begin
 {$ENDIF}
 
     for i:=0 to a_len-1 do
+    begin
+        // cheating a bit, the compiler won't move this out from
+        // the inner loop for us, so we have to it by hand
+        x:=input_a[i];
+        y:=@output_[i];
         for j:=0 to b_len-1 do
-            output_[i+j]:=output_[i+j] + (input_a[i] * input_b[j]);
+            y[j]:=y[j] + (x * input_b[j]);
+    end;
 end;
 
 procedure test;
@@ -28,8 +36,7 @@ var
   input_a: array[0..4999] of Double;
   input_b: array[0..4999] of Double;
   output_: array[0..length(input_a) + length(input_b) - 1] of Double;
-  start: Int64;
-  diff: Int64;
+  start, diff: Int64;
   i: LongInt;
 begin
     for i:=0 to 4999 do
