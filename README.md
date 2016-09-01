@@ -8,19 +8,19 @@ See [here](https://en.wikipedia.org/wiki/Convolution)
 
 ## Performance
 
-| Language          | Average Time |
-| :---------------- | :----------- |
-| cpython           | 9-10 seconds |
-| pypy              | 220-250ms    |
-| C (-O3)           | 14-17ms      |
-| C (memset + -O3)  | 8-11ms       |
-| Rust (--release)  | 15-18ms      |
-| Pascal            | 35-40ms      |
-| Clojure           | 55-70ms      |
-| Java              | 15-20ms      |
-| Node              | 2 seconds    |
-| JS (browser)      | 800-900ms    |
-| Swift             | 500-530ms    |
+| Language          | Average Time    |
+| :---------------- | :-------------- |
+| cpython           | 9-10 seconds    |
+| pypy              | 220-250ms       |
+| C (-O3)           | 14-17ms         |
+| C (memset + -O3)  | 8-11ms          |
+| Rust (--release)  | 15-18ms         |
+| Pascal            | 16-21ms         |
+| Clojure           | 55-70ms         |
+| Java              | 15-20ms         |
+| Node              | 1.8-2.0 seconds |
+| JS (browser)      | 800-900ms       |
+| Swift             | 470-485ms       |
 
 ### Python
 
