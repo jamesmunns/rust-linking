@@ -20,7 +20,7 @@ See [here](https://en.wikipedia.org/wiki/Convolution)
 | Java              | 15-20ms         |
 | Node              | 1.8-2.0 seconds |
 | JS (browser)      | 800-900ms       |
-| Swift             | 470-485ms       |
+| Swift             | 19-24ms         |
 
 ### Python
 
@@ -97,5 +97,5 @@ $ node convolve.js
 ## Swift
 
 ```bash
-$ swift convolve.swift
+$ swift -O convolve.swift
 ```
