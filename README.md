@@ -8,19 +8,20 @@ See [here](https://en.wikipedia.org/wiki/Convolution)
 
 ## Performance
 
-| Language          | Average Time    |
-| :---------------- | :-------------- |
-| cpython           | 9-10 seconds    |
-| pypy              | 220-250ms       |
-| C (-O3)           | 14-17ms         |
-| C (memset + -O3)  | 8-11ms          |
-| Rust (--release)  | 15-18ms         |
-| Pascal            | 16-21ms         |
-| Clojure           | 55-70ms         |
-| Java              | 15-20ms         |
-| Node              | 1.8-2.0 seconds |
-| JS (browser)      | 800-900ms       |
-| Swift             | 19-24ms         |
+| Language            | Average Time    |
+| :------------------ | :-------------- |
+| C (memset + -O3)    | 8-11ms          |
+| Swift (no overflow) | 9-16ms          |
+| C (-O3)             | 14-17ms         |
+| Rust (--release)    | 15-18ms         |
+| Java                | 15-20ms         |
+| Pascal              | 16-21ms         |
+| Swift (-O)          | 19-24ms         |
+| Clojure             | 55-70ms         |
+| pypy                | 220-250ms       |
+| JS (browser)        | 800-900ms       |
+| Node                | 1.8-2.0 seconds |
+| cpython             | 9-10 seconds    |
 
 ### Python
 
@@ -98,4 +99,5 @@ $ node convolve.js
 
 ```bash
 $ swift -O convolve.swift
+$ swift -Ounchecked convolve.swift
 ```
