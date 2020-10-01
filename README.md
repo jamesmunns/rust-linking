@@ -45,12 +45,12 @@ Duration { secs: 0, nanos: 17353000 }
 ## C
 
 ```bash
-➜  c-lang git:(master) ✗ gcc main.c -O3 -Wall -Werror -pedantic -o convo && ./convo
+➜  c-lang git:(master) ✗ gcc main.c -O3 -Wall -Werror -pedantic -lm -o convo && ./convo
 Start
 Done.
 Time taken 0 seconds 16 milliseconds
 
-➜  c-lang git:(master) ✗ gcc main.c -O3 -Wall -Werror -pedantic -DUSE_HAX -o convo && ./convo
+➜  c-lang git:(master) ✗ gcc main.c -O3 -Wall -Werror -pedantic -DUSE_HAX -lm -o convo && ./convo
 Start
 Done.
 Time taken 0 seconds 9 milliseconds
